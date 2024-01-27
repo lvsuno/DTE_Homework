@@ -2,69 +2,32 @@
 
 You can find here my answers for the homework_1 (Dezoomcamp)
 
-## Question 1 : Which tag has the following text? - Automatically remove the container when it exits
+## Question 1 :
+
+<p align="center">
+![logo](./images/Output_docker_run.png "docker run --help")
+</p>
 
 
-<img src="images/Output_docker_run.png"
-alt="docker run --help" style="width:100%; border:0;">
 
-## Question 2: Run docker with the python:3.9 image in an interactive mode and the entrypoint of bash. Now check the python modules that are installed ( use `pip list` ). What is version of the package wheel ?
+## Question 5: 
 
-<img src="images/Output_python_wheel.png"
-alt="wheel version" style="width:100%; border:0;">
 
-## Question 3: How many taxi trips were totally made on September 18th 2019?
-
-After ingesting both data through the following code 
 
 ```
-URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
+SELECT z."Borough", sum(total_amount)
+FROM 
+taxi_trips_2019_09 ta 
+LEFT JOIN 
+zones z
+ON
+ta."PULocationID"= z."LocationID"
+where DATE(ta."lpep_pickup_datetime") = '2019-09-18'
 
-python scripts/ingest_param_data.py \
-  --user=root \
-  --password=root \
-  --host=localhost \
-  --port=5432 \
-  --db=ny_taxi \
-  --table_name=taxi_trips_2019_09 \
-  --url=${URL}  
+group by z."Borough"
 
-
-URL="https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
-
-python scipts/ingest_param_data.py \
-  --user=root \
-  --password=root \
-  --host=localhost \
-  --port=5432 \
-  --db=ny_taxi \
-  --table_name=zones \
-  --url=${URL}   
+order by sum(total_amount) DESC;
 ```
-We get the following output with the mentionned Sql code 
-
-<img src="images/Output_question_3.png"
-alt="docker run --help" style="width:100%; border:0;">
-
-## Question 4: Which was the pick up day with the largest trip distance Use the pick up time for your calculations.
-We get the following output with the mentionned Sql code 
-
-<img src="images/Output_question_4.png"
-alt="docker run --help" style="width:100%; border:0;">
-
-## Question 5: Consider lpep_pickup_datetime in '2019-09-18' and ignoring Borough has Unknown. Which were the 3 pick up Boroughs that had a sum of total_amount superior to 50000?
-
-We get the following output with the mentionned Sql code 
-
-<img src="images/Output_question_5.png"
-alt="docker run --help" style="width:100%; border:0;">
-
-## Question 6. For the passengers picked up in September 2019 in the zone name Astoria which was the drop off zone that had the largest tip? We want the name of the zone, not the id.
-
-We get the following output with the mentionned Sql code 
-
-<img src="images/Output_question_6.png"
-alt="docker run --help" style="width:100%; border:0;">
 
 
 ## Question 7
