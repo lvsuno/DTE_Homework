@@ -5,7 +5,7 @@ You can find here my answers for the homework_1 (Dezoomcamp)
 ## Question 1 :
 
 <p align="center">
-![logo](./images/Output_docker_run.png "docker run --help")
+![logo](./images/Output_docker_run.png "docker")
 </p>
 
 
