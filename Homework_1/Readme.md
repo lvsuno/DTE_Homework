@@ -15,7 +15,7 @@ alt="docker run --help" style="width:100%; border:0;">
 
 
 <p align="center">
-<img src="images/Output_python_wheel.png "
+<img src="images/output_python_wheel.png "
 alt="docker run --help" style="width:100%; border:0;">
 </p>
 
