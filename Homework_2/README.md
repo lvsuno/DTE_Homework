@@ -5,6 +5,7 @@ We create a pipeline named `green_taxi_etl` as we can see in the following image
 alt="docker run --help" style="width:100%; border:0;">
 </p>
 
+
 The code for the data loader block is:
 
 <p align="center">
@@ -27,5 +28,13 @@ alt="docker run --help" style="width:100%; border:0;">
 The code to write our data as Parquet files to a bucket in GCP, partioned by `lpep_pickup_date` is:
 <p align="center">
 <img src="images/GCP_exporter_code.png "
+alt="docker run --help" style="width:100%; border:0;">
+</p>
+
+We set the trigger to run the code each day at  `5 am`  
+
+
+<p align="center">
+<img src="images/Trigger_at_5_am.png "
 alt="docker run --help" style="width:100%; border:0;">
 </p>
