@@ -108,4 +108,4 @@ def export_data(data, *args, **kwargs):
     )
 ```
 
-The SQL code for the exercise can be found in [Homework_3](../scripts/Homework_3/)
+The SQL code for the exercise can be found in [Homework_3](../scripts/Homework_3/Homework_3.sql)
