@@ -4,7 +4,7 @@ I use Mage to load the 2022 Green Taxi Trip Record Parquet Files and export it i
 
 The Data loader code is the following:
 
-```
+``` python
 import io
 import pandas as pd
 import requests
@@ -74,7 +74,7 @@ def test_output(output, *args) -> None:
 
 I don't transform the data since in this homework it's not required. The Data Exporter code is:
 
-```
+``` python
 import pyarrow as pa
 import pyarrow.parquet as pq
 import os

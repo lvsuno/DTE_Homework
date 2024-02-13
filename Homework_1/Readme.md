@@ -23,7 +23,7 @@ alt="docker run --help" style="width:100%; border:0;">
 
 After ingesting the data through the following code
 
-``` 
+``` python
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
 
 python scripts/ingest_param_data.py \
