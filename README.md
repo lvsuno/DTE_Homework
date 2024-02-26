@@ -6,6 +6,8 @@ In the following weeks, you will find here my answers to the homeworks of the  2
 
 - The answer for homework 3 can be found in [Homework_3](Homework_3/)
 
+- The answer for homework 4 can be found in [Homework_4](Homework_4/)
+
 
 
 
