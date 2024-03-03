@@ -161,3 +161,7 @@ cython_debug/
 
 Workshop_homework/*.duckdb
 Workshop_homework/*.duckdb.wal
+
+data/
+
+scripts/Homework_5/fhv_tripdata_2019-10.csv
