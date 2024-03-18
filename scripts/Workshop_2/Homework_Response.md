@@ -186,7 +186,7 @@ WITH t AS (
     from t, trip_data
     Join taxi_zone  as pick_taxi
         ON trip_data.pulocationid = pick_taxi.location_id
-    Where trip_data.tpep_pickup_datetime > t.latest_pickup_time - interval '17 hour'
+    Where trip_data.tpep_pickup_datetime >= t.latest_pickup_time - interval '17 hour'
     group by  pick_taxi.Zone
     order by num_trips DESC
     LIMIT 3;
